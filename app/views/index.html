@@ -6,6 +6,15 @@
   <title>Document</title>
 </head>
 <body>
-  Hello world
+  <button onclick="checkout();">checkout</button>
+
+  <script>
+    function checkout() {
+      fetch('http://localhost:3000/api/checkout')
+        .then(res => res.json())
+        .then(console.log);        
+    }
+  </script>
+
 </body>
 </html>
