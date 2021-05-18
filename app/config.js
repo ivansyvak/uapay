@@ -1,6 +1,7 @@
+const secret = require('./secret');
 const CONFIG = {
-  apiURL: 'https://api.demo.uapay.ua/api/',
-  secret: 'cko3H5rwNivRpdWxgfHJLg=='
+  secret,
+  apiURL: 'https://api.demo.uapay.ua/api/'
 };
 
 module.exports = CONFIG;
