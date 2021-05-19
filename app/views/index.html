@@ -6,14 +6,25 @@
   <title>Document</title>
 </head>
 <body>
-  <button onclick="checkout();">checkout</button>
+  <button onclick="checkoutECOM();">checkout ecom</button>
+  <button onclick="checkoutP2P();">checkout p2p</button>
+
 
   <script>
-    function checkout() {
-      fetch('http://localhost:3000/api/checkout')
+    function checkoutECOM() {
+      fetch('http://localhost:3000/api/checkoutECOM')
         .then(res => res.json())
-        .then(console.log);        
+        .then(openCheckoutPage);        
     }
+
+    function checkoutP2P() {
+
+    }
+
+    function openCheckoutPage(invoiceData) {
+      window.open(invoiceData.paymentPageUrl)
+    }
+
   </script>
 
 </body>

@@ -3,6 +3,7 @@ const apiRouter = express.Router();
 
 const apiController = require('./controllers/api');
 
-apiRouter.get('/checkout', apiController.checkout);
+apiRouter.get('/checkoutECOM', apiController.checkoutECOM);
+apiRouter.get('/checkoutP2P', apiController.checkoutP2P);
 
 module.exports = apiRouter;
